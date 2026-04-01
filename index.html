@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meenu & Arjun | Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b0b0c;
+    color:#eaeaea;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:70px;
+    color:#d4af37;
+    letter-spacing:3px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.8;
+}
+
+.divider{
+    width:80px;
+    height:2px;
+    background:#d4af37;
+    margin:20px auto;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.title{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.text{
+    font-size:15px;
+    color:#bbb;
+}
+
+.highlight{
+    font-size:18px;
+    color:#fff;
+    margin-top:8px;
+}
+
+/* BUTTON */
+.button{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 25px;
+    border-radius:30px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+/* MAP (FIXED - COLOR) */
+.map iframe{
+    width:100%;
+    height:180px;
+    border:none;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+/* COUNTDOWN */
+.countdown{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.time-box{
+    background:#000;
+    padding:15px;
+    border-radius:10px;
+    flex:1;
+    margin:5px;
+    text-align:center;
+}
+
+.time-box span{
+    display:block;
+    font-size:22px;
+    color:#d4af37;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    letter-spacing:2px;
+}
+
+/* PROMO FOOTER */
+.promo-footer{
+    text-align:center;
+    font-size:12px;
+    padding:12px;
+    background:#0a0a0a;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.promo-footer strong{
+    color:#d4af37;
+    letter-spacing:1px;
+}
+
+.promo-footer a{
+    color:#d4af37;
+    text-decoration:none;
+}
+
+.promo-footer a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:768px){
+    .countdown{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Meenu & Arjun</h1>
+    <div class="divider"></div>
+    <p>We Are Getting Married</p>
+    <p>April 20, 2026</p>
+</div>
+
+<div class="container">
+<div class="grid">
+
+<!-- DATE & TIME -->
+<div class="card">
+    <div class="title">Date & Time</div>
+    <div class="text">April 20, 2026</div>
+    <div class="highlight">10:30 AM – 11:00 AM</div>
+</div>
+
+<!-- VENUE -->
+<div class="card">
+    <div class="title">Venue</div>
+    <div class="text">Palace Auditorium, Edappally</div>
+    <a class="button" href="https://share.google/W9smffCszYtuUGoI0" target="_blank">View Location</a>
+    <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Palace%20Auditorium%20Edappally&z=15&output=embed"></iframe>
+    </div>
+</div>
+
+<!-- CEREMONY -->
+<div class="card">
+    <div class="title">Ceremony</div>
+    <div class="text">🌿 Traditional Wedding Rituals & Blessings</div>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="card">
+    <div class="title">Countdown</div>
+    <div class="countdown">
+        <div class="time-box"><span id="days">0</span>Days</div>
+        <div class="time-box"><span id="hours">0</span>Hours</div>
+        <div class="time-box"><span id="minutes">0</span>Min</div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <div class="title">Contact</div>
+    <div class="highlight">+91 7902262124</div>
+    <div class="highlight">+91 8589062539</div>
+</div>
+
+</div>
+</div>
+
+<!-- MAIN FOOTER -->
+<div class="footer">✨ ALL ARE WELCOME ✨</div>
+
+<!-- PROMO FOOTER -->
+<div class="promo-footer">
+    Digital Invite by <strong>Stories of Vyshnav</strong> ✨ |
+    <a href="https://wa.me/919544081006" target="_blank">Contact</a>
+</div>
+
+<script>
+const weddingDate = new Date("April 20, 2026 10:30:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const gap = weddingDate - now;
+
+    document.getElementById("days").innerText = Math.floor(gap / (1000*60*60*24));
+    document.getElementById("hours").innerText = Math.floor((gap % (1000*60*60*24)) / (1000*60*60));
+    document.getElementById("minutes").innerText = Math.floor((gap % (1000*60*60)) / (1000*60));
+}, 1000);
+</script>
+
+</body>
+</html>
